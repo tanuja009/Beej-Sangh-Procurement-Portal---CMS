@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>बीज उत्पादक पंजीयन – बीज संघ</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.page-banner{background:linear-gradient(135deg,#1B5E20,#2E7D32,#388E3C);padding:48px 0;color:#fff;}
+.page-banner h1{font-size:2rem;font-weight:700;margin-bottom:8px;}
+.breadcrumb-nav{display:flex;align-items:center;gap:6px;font-size:0.8125rem;color:rgba(255,255,255,0.65);margin-top:12px;}
+.breadcrumb-nav a{color:rgba(255,255,255,0.8);text-decoration:none;}.breadcrumb-nav .sep{color:rgba(255,255,255,0.4);}
+.step-indicator{display:flex;align-items:center;gap:0;margin-bottom:32px;}
+.step{display:flex;align-items:center;gap:8px;padding:10px 20px;border-radius:8px;font-size:0.8125rem;font-weight:600;cursor:pointer;transition:all .2s;}
+.step.active{background:var(--green-50);color:var(--green-800);border:2px solid var(--green-600);}
+.step.done{background:var(--green-800);color:#fff;}
+.step.pending{background:#fff;color:var(--neutral-500);border:2px solid var(--neutral-200);}
+.step-num{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.8125rem;}
+.step.active .step-num{background:var(--green-800);color:#fff;}
+.step.done .step-num{background:rgba(255,255,255,0.3);color:#fff;}
+.step.pending .step-num{background:var(--neutral-200);color:var(--neutral-600);}
+.step-connector{flex:1;height:2px;background:var(--neutral-200);min-width:16px;}
+.step-connector.done{background:var(--green-600);}
+.reg-form{background:#fff;border-radius:20px;box-shadow:0 4px 20px rgba(0,0,0,0.08);padding:36px;}
+.form-section{margin-bottom:28px;}
+.form-section h3{font-size:1rem;font-weight:700;color:var(--green-800);margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--green-100);}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.form-group{display:flex;flex-direction:column;gap:5px;}
+.form-label{font-size:0.8125rem;font-weight:600;color:var(--neutral-700);}
+.form-input,.form-select{padding:10px 14px;border:1.5px solid var(--neutral-300);border-radius:8px;font-size:0.875rem;font-family:inherit;outline:none;transition:border-color .2s;}
+.form-input:focus,.form-select:focus{border-color:var(--green-600);}
+.form-hint{font-size:0.75rem;color:var(--neutral-500);}
+.required{color:red;}
+</style>
+</head>
+<body>
+
+<div class="utility-bar"><div class="container"><div class="utility-links"><a href="#">स्क्रीन रीडर</a><span class="sep">|</span><a href="#">A</a></div><div class="lang-switch"><button class="lang-btn active">हिंदी</button><button class="lang-btn">English</button></div></div></div>
+
+<header class="site-header"><div class="container"><div class="header-inner">
+  <a href="index.html" class="header-logo"><svg viewBox="0 0 60 60" fill="none" class="logo-emblem" aria-label="बीज संघ"><circle cx="30" cy="30" r="28" fill="#2E7D32" stroke="#F9A825" stroke-width="3"/><text x="30" y="26" text-anchor="middle" fill="#F9A825" font-size="8" font-weight="700" font-family="serif">म.प्र.</text><text x="30" y="36" text-anchor="middle" fill="#fff" font-size="5.5" font-family="serif">बीज संघ</text></svg>
+  <div class="logo-text"><span class="org-name-hi">म.प्र. राज्य बीज एवं फार्म विकास निगम</span><span class="org-name-en">MP Rajya Beej Evam Farm Vikas Nigam</span></div></a>
+  <div class="header-divider"></div>
+  <div class="header-title"><h1>बीज संघ पोर्टल</h1><p>उत्तम बीज, उत्तम उपज, समृद्ध किसान</p></div>
+  <div class="header-actions"><a href="portal-login.html" class="btn btn-primary btn-sm">लॉगिन करें</a></div>
+</div></div></header>
+
+<nav class="main-nav"><div class="container"><ul class="nav-list">
+  <li><a href="index.html">होम</a></li><li><a href="about.html">हमारे बारे में</a></li>
+  <li><a href="seed-registration.html" class="active" aria-current="page">किसान सेवाएं</a></li>
+  <li><a href="seed-info.html">बीज जानकारी</a></li>
+  <li><a href="notifications.html">अधिसूचनाएं</a></li><li><a href="circulars.html">परिपत्र / आदेश</a></li>
+  <li><a href="tenders.html">निविदाएं</a></li><li><a href="news.html">समाचार एवं कार्यक्रम</a></li>
+</ul></div></nav>
+
+<div class="page-banner"><div class="container">
+  <h1>बीज उत्पादक पंजीयन</h1>
+  <p>बीज संघ में उत्पादक किसान के रूप में पंजीयन करें</p>
+  <nav class="breadcrumb-nav" aria-label="ब्रेडक्रंब"><a href="index.html">होम</a><span class="sep">›</span><a href="#">किसान सेवाएं</a><span class="sep">›</span><span>बीज उत्पादक पंजीयन</span></nav>
+</div></div>
+
+<main id="main">
+<section class="section">
+  <div class="container">
+    <!-- Info Banner -->
+    <div style="background:var(--yellow-50);border:1.5px solid var(--yellow-400);border-radius:12px;padding:16px 20px;margin-bottom:28px;display:flex;gap:12px;align-items:flex-start;">
+      <span style="font-size:1.25rem;flex-shrink:0;">ℹ️</span>
+      <div><strong style="color:var(--yellow-800);">पंजीयन से पहले जानें:</strong> बीज उत्पादक बनने के लिए आपके पास न्यूनतम 2 हेक्टेयर भूमि होनी चाहिए। पंजीयन के बाद बीज संघ के प्रतिनिधि आपसे संपर्क करेंगे।</div>
+    </div>
+
+    <!-- Steps -->
+    <div class="step-indicator" role="progressbar" aria-valuetext="चरण 1 में से 4" aria-valuenow="1" aria-valuemin="1" aria-valuemax="4">
+      <div class="step active"><div class="step-num">1</div><span>व्यक्तिगत जानकारी</span></div>
+      <div class="step-connector"></div>
+      <div class="step pending"><div class="step-num">2</div><span>भूमि जानकारी</span></div>
+      <div class="step-connector"></div>
+      <div class="step pending"><div class="step-num">3</div><span>फसल चयन</span></div>
+      <div class="step-connector"></div>
+      <div class="step pending"><div class="step-num">4</div><span>दस्तावेज</span></div>
+    </div>
+
+    <div class="reg-form">
+      <form onsubmit="return false;" aria-label="बीज उत्पादक पंजीयन फ़ॉर्म">
+        <!-- Personal Info -->
+        <div class="form-section">
+          <h3>व्यक्तिगत जानकारी</h3>
+          <div class="form-grid">
+            <div class="form-group"><label class="form-label" for="f-name">पूरा नाम (हिंदी) <span class="required">*</span></label><input class="form-input" id="f-name" type="text" placeholder="जैसे: रामलाल पटेल" required aria-required="true"/></div>
+            <div class="form-group"><label class="form-label" for="f-name-en">Full Name (English) <span class="required">*</span></label><input class="form-input" id="f-name-en" type="text" placeholder="e.g. Ramlal Patel" required aria-required="true"/></div>
+            <div class="form-group"><label class="form-label" for="f-father">पिता/पति का नाम <span class="required">*</span></label><input class="form-input" id="f-father" type="text" required aria-required="true"/></div>
+            <div class="form-group"><label class="form-label" for="f-dob">जन्म तिथि <span class="required">*</span></label><input class="form-input" id="f-dob" type="date" required aria-required="true"/></div>
+            <div class="form-group"><label class="form-label" for="f-mobile">मोबाइल नंबर <span class="required">*</span></label><input class="form-input" id="f-mobile" type="tel" placeholder="10 अंकों का मोबाइल" maxlength="10" required aria-required="true"/><span class="form-hint">इसी नंबर पर OTP आएगा</span></div>
+            <div class="form-group"><label class="form-label" for="f-aadhar">आधार कार्ड नंबर <span class="required">*</span></label><input class="form-input" id="f-aadhar" type="text" placeholder="12 अंकों का आधार नंबर" maxlength="12" required aria-required="true"/></div>
+          </div>
+        </div>
+
+        <!-- Address -->
+        <div class="form-section">
+          <h3>पता जानकारी</h3>
+          <div class="form-grid">
+            <div class="form-group"><label class="form-label" for="f-dist">जिला <span class="required">*</span></label>
+              <select class="form-select" id="f-dist" required aria-required="true">
+                <option value="">जिला चुनें</option>
+                <option>भोपाल</option><option>इंदौर</option><option>जबलपुर</option><option>ग्वालियर</option>
+                <option>उज्जैन</option><option>सागर</option><option>रीवा</option><option>होशंगाबाद</option>
+                <option>विदिशा</option><option>बालाघाट</option><option>छिंदवाड़ा</option><option>देवास</option>
+              </select>
+            </div>
+            <div class="form-group"><label class="form-label" for="f-block">तहसील / ब्लॉक <span class="required">*</span></label><input class="form-input" id="f-block" type="text" required aria-required="true"/></div>
+            <div class="form-group"><label class="form-label" for="f-village">ग्राम / वार्ड <span class="required">*</span></label><input class="form-input" id="f-village" type="text" required aria-required="true"/></div>
+            <div class="form-group"><label class="form-label" for="f-pin">पिन कोड <span class="required">*</span></label><input class="form-input" id="f-pin" type="text" maxlength="6" required aria-required="true"/></div>
+          </div>
+        </div>
+
+        <!-- Bank Details -->
+        <div class="form-section">
+          <h3>बैंक खाता जानकारी</h3>
+          <div class="form-grid">
+            <div class="form-group"><label class="form-label" for="f-bank">बैंक का नाम <span class="required">*</span></label><input class="form-input" id="f-bank" type="text" required aria-required="true"/></div>
+            <div class="form-group"><label class="form-label" for="f-ifsc">IFSC कोड <span class="required">*</span></label><input class="form-input" id="f-ifsc" type="text" placeholder="जैसे: SBIN0012345" required aria-required="true"/></div>
+            <div class="form-group"><label class="form-label" for="f-acc">खाता नंबर <span class="required">*</span></label><input class="form-input" id="f-acc" type="text" required aria-required="true"/></div>
+            <div class="form-group"><label class="form-label" for="f-acc2">खाता नंबर पुनः दर्ज करें <span class="required">*</span></label><input class="form-input" id="f-acc2" type="text" required aria-required="true"/></div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px;justify-content:flex-end;flex-wrap:wrap;">
+          <button type="button" class="btn btn-outline-green">पिछला</button>
+          <button type="button" class="btn btn-secondary">अगला चरण →</button>
+          <button type="submit" class="btn btn-primary">पंजीयन जमा करें</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-bottom" style="padding:18px 0;border-top:1px solid rgba(255,255,255,0.1);">
+  <span>© 2026 म.प्र. राज्य बीज एवं फार्म विकास निगम</span>
+  <div style="display:flex;gap:16px;"><a href="#">गोपनीयता नीति</a><a href="#">अस्वीकरण</a></div>
+</div></div></footer>
+</body>
+</html>
