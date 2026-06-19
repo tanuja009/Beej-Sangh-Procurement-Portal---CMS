@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>अधिसूचनाएं – बीज संघ</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.page-banner{background:linear-gradient(135deg,#1B5E20,#2E7D32,#388E3C);padding:48px 0;color:#fff;}
+.page-banner h1{font-size:2rem;font-weight:700;margin-bottom:8px;}
+.breadcrumb-nav{display:flex;align-items:center;gap:6px;font-size:0.8125rem;color:rgba(255,255,255,0.65);margin-top:12px;}
+.breadcrumb-nav a{color:rgba(255,255,255,0.8);text-decoration:none;}
+.breadcrumb-nav .sep{color:rgba(255,255,255,0.4);}
+.notif-new{display:inline-block;background:#F44336;color:#fff;font-size:0.5625rem;font-weight:700;padding:1px 5px;border-radius:3px;margin-left:6px;vertical-align:middle;text-transform:uppercase;}
+</style>
+</head>
+<body>
+
+<div class="utility-bar"><div class="container"><div class="utility-links"><a href="#">स्क्रीन रीडर</a><span class="sep">|</span><a href="#">A</a><span class="sep">|</span><a href="#" style="font-size:0.875rem">A+</a><span class="sep">|</span><a href="#" style="font-size:0.75rem">A-</a></div><div class="lang-switch"><button class="lang-btn active">हिंदी</button><button class="lang-btn">English</button></div></div></div>
+
+<header class="site-header"><div class="container"><div class="header-inner">
+  <a href="index.html" class="header-logo"><svg viewBox="0 0 60 60" fill="none" class="logo-emblem" aria-label="बीज संघ"><circle cx="30" cy="30" r="28" fill="#2E7D32" stroke="#F9A825" stroke-width="3"/><text x="30" y="26" text-anchor="middle" fill="#F9A825" font-size="8" font-weight="700" font-family="serif">म.प्र.</text><text x="30" y="36" text-anchor="middle" fill="#fff" font-size="5.5" font-family="serif">बीज संघ</text></svg>
+  <div class="logo-text"><span class="org-name-hi">म.प्र. राज्य बीज एवं फार्म विकास निगम</span><span class="org-name-en">MP Rajya Beej Evam Farm Vikas Nigam</span></div></a>
+  <div class="header-divider"></div>
+  <div class="header-title"><h1>बीज संघ पोर्टल</h1><p>उत्तम बीज, उत्तम उपज, समृद्ध किसान</p></div>
+  <div class="header-actions"><a href="portal-login.html" class="btn btn-primary btn-sm">लॉगिन करें</a></div>
+</div></div></header>
+
+<nav class="main-nav"><div class="container"><ul class="nav-list">
+  <li><a href="index.html">होम</a></li>
+  <li><a href="about.html">हमारे बारे में</a></li>
+  <li><a href="seed-registration.html">किसान सेवाएं</a></li>
+  <li><a href="seed-info.html">बीज जानकारी</a></li>
+  <li><a href="notifications.html" class="active" aria-current="page">अधिसूचनाएं</a></li>
+  <li><a href="circulars.html">परिपत्र / आदेश</a></li>
+  <li><a href="tenders.html">निविदाएं</a></li>
+  <li><a href="news.html">समाचार एवं कार्यक्रम</a></li>
+</ul></div></nav>
+
+<div class="page-banner"><div class="container">
+  <h1>अधिसूचनाएं</h1>
+  <p>नवीनतम अधिसूचनाएं, परिपत्र एवं सरकारी घोषणाएं</p>
+  <nav class="breadcrumb-nav" aria-label="ब्रेडक्रंब"><a href="index.html">होम</a><span class="sep">›</span><span>अधिसूचनाएं</span></nav>
+</div></div>
+
+<main id="main">
+<section class="section">
+  <div class="container">
+    <!-- Filters -->
+    <div class="notif-table-wrap">
+      <div class="notif-filters" role="search" aria-label="अधिसूचना फ़िल्टर">
+        <div style="display:flex;align-items:center;gap:8px;flex:1;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9E9E9E" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="search" class="filter-input" placeholder="विषय या अधिसूचना क्र. से खोजें..." aria-label="अधिसूचना खोज" style="flex:1;" id="notifSearch"/>
+        </div>
+        <select class="filter-input" style="min-width:130px;" aria-label="वर्ष चुनें" id="yearFilter">
+          <option value="">सभी वर्ष</option>
+          <option value="2026" selected>2026</option>
+          <option value="2025">2025</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+        </select>
+        <select class="filter-input" style="min-width:160px;" aria-label="श्रेणी चुनें" id="catFilter">
+          <option value="">सभी श्रेणियां</option>
+          <option value="बीज">बीज संबंधी</option>
+          <option value="प्रशिक्षण">प्रशिक्षण</option>
+          <option value="वितरण">वितरण</option>
+          <option value="प्रशासनिक">प्रशासनिक</option>
+        </select>
+        <button class="filter-btn" onclick="filterNotifs()" aria-label="खोजें">खोजें</button>
+        <button class="filter-btn" style="background:var(--neutral-500);" onclick="clearFilters()" aria-label="साफ करें">साफ करें</button>
+      </div>
+      <table id="notifTable">
+        <thead>
+          <tr>
+            <th style="width:50px;">क्र.</th>
+            <th>विषय</th>
+            <th>अधिसूचना क्र.</th>
+            <th>श्रेणी</th>
+            <th>दिनांक</th>
+            <th style="width:100px;">डाउनलोड</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>रबी 2026-27 हेतु गेहूं बीज वितरण योजना <span class="notif-new" aria-label="नई">नई</span></td>
+            <td><span class="badge badge-green">MPBF/2026/N/18</span></td>
+            <td><span class="badge badge-green">वितरण</span></td>
+            <td>15 जून 2026</td>
+            <td><a href="#" class="download-link" aria-label="PDF डाउनलोड करें"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PDF</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>खरीफ 2026 सोयाबीन बीज उत्पादक पंजीयन हेतु <span class="notif-new" aria-label="नई">नई</span></td>
+            <td><span class="badge badge-green">MPBF/2026/N/17</span></td>
+            <td><span class="badge badge-yellow">बीज</span></td>
+            <td>10 जून 2026</td>
+            <td><a href="#" class="download-link" aria-label="PDF डाउनलोड करें"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PDF</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>बीज परीक्षण प्रयोगशाला हेतु नई दरें निर्धारण</td>
+            <td><span class="badge badge-yellow">MPBF/2026/N/16</span></td>
+            <td><span class="badge badge-gray">प्रशासनिक</span></td>
+            <td>05 जून 2026</td>
+            <td><a href="#" class="download-link" aria-label="PDF डाउनलोड करें"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PDF</a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>धान मिनिकिट वितरण कार्यक्रम 2026</td>
+            <td><span class="badge badge-green">MPBF/2026/N/15</span></td>
+            <td><span class="badge badge-green">वितरण</span></td>
+            <td>01 जून 2026</td>
+            <td><a href="#" class="download-link" aria-label="PDF डाउनलोड करें"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PDF</a></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>निगम मुख्यालय स्थानान्तरण आदेश</td>
+            <td><span class="badge badge-gray">MPBF/2026/N/14</span></td>
+            <td><span class="badge badge-gray">प्रशासनिक</span></td>
+            <td>28 मई 2026</td>
+            <td><a href="#" class="download-link" aria-label="PDF डाउनलोड करें"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PDF</a></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>किसान प्रशिक्षण कार्यशाला – जून 2026</td>
+            <td><span class="badge badge-green">MPBF/2026/N/13</span></td>
+            <td><span class="badge badge-yellow">प्रशिक्षण</span></td>
+            <td>20 मई 2026</td>
+            <td><a href="#" class="download-link" aria-label="PDF डाउनलोड करें"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PDF</a></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>नई किस्म JW 3288 (गेहूं) का प्रदर्शन परिणाम</td>
+            <td><span class="badge badge-green">MPBF/2026/N/12</span></td>
+            <td><span class="badge badge-yellow">बीज</span></td>
+            <td>15 मई 2026</td>
+            <td><a href="#" class="download-link" aria-label="PDF डाउनलोड करें"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pagination" role="navigation" aria-label="पृष्ठ नेविगेशन">
+      <button class="page-btn" disabled aria-label="पिछला पृष्ठ">‹</button>
+      <button class="page-btn active" aria-current="page" aria-label="पृष्ठ 1">1</button>
+      <button class="page-btn" aria-label="पृष्ठ 2">2</button>
+      <button class="page-btn" aria-label="पृष्ठ 3">3</button>
+      <button class="page-btn" aria-label="अगला पृष्ठ">›</button>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer"><div class="container">
+  <div class="footer-bottom" style="padding:18px 0;border-top:1px solid rgba(255,255,255,0.1);">
+    <span>© 2026 म.प्र. राज्य बीज एवं फार्म विकास निगम</span>
+    <div style="display:flex;gap:16px;"><a href="#">गोपनीयता नीति</a><a href="#">अस्वीकरण</a><a href="#">RTI</a></div>
+  </div>
+</div></footer>
+
+<script>
+function filterNotifs() {
+  const search = document.getElementById('notifSearch').value.toLowerCase();
+  const year = document.getElementById('yearFilter').value;
+  const cat = document.getElementById('catFilter').value;
+  const rows = document.querySelectorAll('#notifTable tbody tr');
+  rows.forEach(row => {
+    const text = row.textContent.toLowerCase();
+    const matchSearch = !search || text.includes(search);
+    const matchYear = !year || text.includes(year);
+    const matchCat = !cat || text.includes(cat);
+    row.style.display = (matchSearch && matchYear && matchCat) ? '' : 'none';
+  });
+}
+function clearFilters() {
+  document.getElementById('notifSearch').value = '';
+  document.getElementById('yearFilter').value = '';
+  document.getElementById('catFilter').value = '';
+  document.querySelectorAll('#notifTable tbody tr').forEach(r => r.style.display = '');
+}
+document.getElementById('notifSearch').addEventListener('input', filterNotifs);
+</script>
+</body>
+</html>

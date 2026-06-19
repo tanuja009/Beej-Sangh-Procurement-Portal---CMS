@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>बीज गुणवत्ता रिपोर्ट – बीज संघ</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.page-banner{background:linear-gradient(135deg,#1B5E20,#2E7D32,#388E3C);padding:48px 0;color:#fff;}
+.page-banner h1{font-size:2rem;font-weight:700;margin-bottom:8px;}
+.breadcrumb-nav{display:flex;align-items:center;gap:6px;font-size:0.8125rem;color:rgba(255,255,255,0.65);margin-top:12px;}
+.breadcrumb-nav a{color:rgba(255,255,255,0.8);text-decoration:none;}.breadcrumb-nav .sep{color:rgba(255,255,255,0.4);}
+.quality-bar{flex:1;height:8px;background:var(--neutral-200);border-radius:4px;overflow:hidden;display:inline-block;width:80px;}
+.quality-fill{height:100%;border-radius:4px;background:var(--green-600);}
+</style>
+</head>
+<body>
+<div class="utility-bar"><div class="container"><div class="utility-links"><a href="#">स्क्रीन रीडर</a><span class="sep">|</span><a href="#">A</a></div><div class="lang-switch"><button class="lang-btn active">हिंदी</button><button class="lang-btn">English</button></div></div></div>
+<header class="site-header"><div class="container"><div class="header-inner">
+  <a href="index.html" class="header-logo"><svg viewBox="0 0 60 60" fill="none" class="logo-emblem" aria-label="बीज संघ"><circle cx="30" cy="30" r="28" fill="#2E7D32" stroke="#F9A825" stroke-width="3"/><text x="30" y="26" text-anchor="middle" fill="#F9A825" font-size="8" font-weight="700" font-family="serif">म.प्र.</text><text x="30" y="36" text-anchor="middle" fill="#fff" font-size="5.5" font-family="serif">बीज संघ</text></svg>
+  <div class="logo-text"><span class="org-name-hi">म.प्र. राज्य बीज एवं फार्म विकास निगम</span><span class="org-name-en">MP Rajya Beej Evam Farm Vikas Nigam</span></div></a>
+  <div class="header-divider"></div><div class="header-title"><h1>बीज संघ पोर्टल</h1><p>उत्तम बीज, उत्तम उपज, समृद्ध किसान</p></div>
+  <div class="header-actions"><a href="portal-login.html" class="btn btn-primary btn-sm">लॉगिन करें</a></div>
+</div></div></header>
+<nav class="main-nav"><div class="container"><ul class="nav-list">
+  <li><a href="index.html">होम</a></li><li><a href="about.html">हमारे बारे में</a></li>
+  <li><a href="seed-registration.html" class="active">किसान सेवाएं</a></li>
+  <li><a href="seed-info.html">बीज जानकारी</a></li>
+  <li><a href="notifications.html">अधिसूचनाएं</a></li><li><a href="circulars.html">परिपत्र / आदेश</a></li>
+  <li><a href="tenders.html">निविदाएं</a></li><li><a href="news.html">समाचार एवं कार्यक्रम</a></li>
+</ul></div></nav>
+<div class="page-banner"><div class="container">
+  <h1>बीज गुणवत्ता रिपोर्ट</h1>
+  <p>NABL प्रमाणित प्रयोगशाला की गुणवत्ता परीक्षण रिपोर्ट</p>
+  <nav class="breadcrumb-nav" aria-label="ब्रेडक्रंब"><a href="index.html">होम</a><span class="sep">›</span><span>बीज गुणवत्ता रिपोर्ट</span></nav>
+</div></div>
+<main id="main">
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:28px;">
+      <div style="background:var(--green-800);color:#fff;border-radius:14px;padding:20px;text-align:center;"><div style="font-size:2rem;font-weight:700;color:#FFCA28;">98.5%</div><div style="font-size:0.8125rem;margin-top:6px;color:rgba(255,255,255,0.85);">औसत भौतिक शुद्धता</div></div>
+      <div style="background:var(--yellow-700);color:#fff;border-radius:14px;padding:20px;text-align:center;"><div style="font-size:2rem;font-weight:700;">88%</div><div style="font-size:0.8125rem;margin-top:6px;color:rgba(255,255,255,0.85);">औसत अंकुरण दर</div></div>
+      <div style="background:var(--green-700);color:#fff;border-radius:14px;padding:20px;text-align:center;"><div style="font-size:2rem;font-weight:700;">11.2%</div><div style="font-size:0.8125rem;margin-top:6px;color:rgba(255,255,255,0.85);">औसत नमी</div></div>
+      <div style="background:var(--green-800);color:#fff;border-radius:14px;padding:20px;text-align:center;"><div style="font-size:2rem;font-weight:700;">99.1%</div><div style="font-size:0.8125rem;margin-top:6px;color:rgba(255,255,255,0.85);">अनुवांशिक शुद्धता</div></div>
+    </div>
+    <div class="notif-table-wrap">
+      <div class="notif-filters">
+        <select class="filter-input" aria-label="फसल चुनें"><option>सभी फसलें</option><option>गेहूं</option><option>सोयाबीन</option><option>धान</option></select>
+        <select class="filter-input" aria-label="सीजन चुनें"><option selected>खरीफ 2026</option><option>रबी 2025-26</option></select>
+        <button class="filter-btn">खोजें</button>
+      </div>
+      <table>
+        <thead><tr><th>नमूना क्र.</th><th>फसल</th><th>किस्म</th><th>लॉट क्र.</th><th>भौतिक शुद्धता</th><th>अंकुरण दर</th><th>नमी</th><th>परिणाम</th><th>रिपोर्ट</th></tr></thead>
+        <tbody>
+          <tr><td>QR/2026/001</td><td>गेहूं</td><td>JW 3288</td><td>MPBF-W-2026-001</td>
+            <td><div style="display:flex;align-items:center;gap:6px;"><span>98.8%</span><div class="quality-bar"><div class="quality-fill" style="width:99%"></div></div></div></td>
+            <td><div style="display:flex;align-items:center;gap:6px;"><span>91%</span><div class="quality-bar"><div class="quality-fill" style="width:91%"></div></div></div></td>
+            <td>10.8%</td><td><span class="badge badge-green">✓ उत्तीर्ण</span></td>
+            <td><a href="#" class="download-link" aria-label="रिपोर्ट डाउनलोड"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PDF</a></td></tr>
+          <tr><td>QR/2026/002</td><td>सोयाबीन</td><td>JS 9560</td><td>MPBF-S-2026-001</td>
+            <td><div style="display:flex;align-items:center;gap:6px;"><span>99.1%</span><div class="quality-bar"><div class="quality-fill" style="width:99%"></div></div></div></td>
+            <td><div style="display:flex;align-items:center;gap:6px;"><span>82%</span><div class="quality-bar"><div class="quality-fill" style="width:82%"></div></div></div></td>
+            <td>11.5%</td><td><span class="badge badge-green">✓ उत्तीर्ण</span></td>
+            <td><a href="#" class="download-link" aria-label="रिपोर्ट डाउनलोड"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PDF</a></td></tr>
+          <tr><td>QR/2026/003</td><td>धान</td><td>HKR-47</td><td>MPBF-R-2026-001</td>
+            <td><div style="display:flex;align-items:center;gap:6px;"><span>97.5%</span><div class="quality-bar"><div class="quality-fill" style="width:98%"></div></div></div></td>
+            <td><div style="display:flex;align-items:center;gap:6px;"><span>78%</span><div class="quality-bar"><div class="quality-fill" style="width:78%"></div></div></div></td>
+            <td>12.1%</td><td><span class="badge badge-yellow">⚠ सीमांत</span></td>
+            <td><a href="#" class="download-link" aria-label="रिपोर्ट डाउनलोड"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> PDF</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="background:var(--green-50);border:1px solid var(--green-200);border-radius:10px;padding:14px 18px;margin-top:16px;font-size:0.8125rem;color:var(--green-800);">
+      🔬 <strong>NABL प्रमाणित प्रयोगशाला:</strong> म.प्र. बीज परीक्षण प्रयोगशाला, भोपाल | मान्यता क्र. TC-6402 | ISTA नियमों के अनुसार
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-bottom" style="padding:18px 0;border-top:1px solid rgba(255,255,255,0.1);">
+  <span>© 2026 म.प्र. राज्य बीज एवं फार्म विकास निगम</span>
+  <div style="display:flex;gap:16px;"><a href="#">गोपनीयता नीति</a><a href="#">अस्वीकरण</a></div>
+</div></div></footer>
+</body>
+</html>
