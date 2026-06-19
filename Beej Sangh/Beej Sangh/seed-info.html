@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>बीज जानकारी – बीज संघ</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.page-banner{background:linear-gradient(135deg,#1B5E20,#2E7D32,#388E3C);padding:48px 0;color:#fff;}
+.page-banner h1{font-size:2rem;font-weight:700;margin-bottom:8px;}
+.breadcrumb-nav{display:flex;align-items:center;gap:6px;font-size:0.8125rem;color:rgba(255,255,255,0.65);margin-top:12px;}
+.breadcrumb-nav a{color:rgba(255,255,255,0.8);text-decoration:none;}.breadcrumb-nav .sep{color:rgba(255,255,255,0.4);}
+.quality-indicator{display:flex;align-items:center;gap:6px;font-size:0.75rem;}
+.quality-bar{flex:1;height:6px;background:var(--neutral-200);border-radius:var(--radius-full);overflow:hidden;}
+.quality-fill{height:100%;border-radius:var(--radius-full);background:var(--green-600);}
+.info-card{background:#fff;border-radius:14px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border-left:4px solid var(--green-600);}
+.info-card h4{font-size:0.9375rem;font-weight:700;color:var(--green-800);margin-bottom:10px;}
+.info-card p,.info-card li{font-size:0.875rem;color:var(--neutral-700);line-height:1.7;}
+.info-card ul{padding-left:16px;list-style:disc;}
+</style>
+</head>
+<body>
+
+<div class="utility-bar"><div class="container"><div class="utility-links"><a href="#">स्क्रीन रीडर</a><span class="sep">|</span><a href="#">A</a><span class="sep">|</span><a href="#" style="font-size:0.875rem">A+</a></div><div class="lang-switch"><button class="lang-btn active">हिंदी</button><button class="lang-btn">English</button></div></div></div>
+
+<header class="site-header"><div class="container"><div class="header-inner">
+  <a href="index.html" class="header-logo"><svg viewBox="0 0 60 60" fill="none" class="logo-emblem" aria-label="बीज संघ"><circle cx="30" cy="30" r="28" fill="#2E7D32" stroke="#F9A825" stroke-width="3"/><text x="30" y="26" text-anchor="middle" fill="#F9A825" font-size="8" font-weight="700" font-family="serif">म.प्र.</text><text x="30" y="36" text-anchor="middle" fill="#fff" font-size="5.5" font-family="serif">बीज संघ</text></svg>
+  <div class="logo-text"><span class="org-name-hi">म.प्र. राज्य बीज एवं फार्म विकास निगम</span><span class="org-name-en">MP Rajya Beej Evam Farm Vikas Nigam</span></div></a>
+  <div class="header-divider"></div>
+  <div class="header-title"><h1>बीज संघ पोर्टल</h1><p>उत्तम बीज, उत्तम उपज, समृद्ध किसान</p></div>
+  <div class="header-actions"><a href="portal-login.html" class="btn btn-primary btn-sm">लॉगिन करें</a></div>
+</div></div></header>
+
+<nav class="main-nav"><div class="container"><ul class="nav-list">
+  <li><a href="index.html">होम</a></li><li><a href="about.html">हमारे बारे में</a></li>
+  <li><a href="seed-registration.html">किसान सेवाएं</a></li>
+  <li><a href="seed-info.html" class="active" aria-current="page">बीज जानकारी</a></li>
+  <li><a href="notifications.html">अधिसूचनाएं</a></li><li><a href="circulars.html">परिपत्र / आदेश</a></li>
+  <li><a href="tenders.html">निविदाएं</a></li><li><a href="news.html">समाचार एवं कार्यक्रम</a></li>
+</ul></div></nav>
+
+<div class="page-banner"><div class="container">
+  <h1>बीज जानकारी</h1>
+  <p>फसलवार किस्में, अंकुरण दर एवं गुणवत्ता मानक</p>
+  <nav class="breadcrumb-nav" aria-label="ब्रेडक्रंब"><a href="index.html">होम</a><span class="sep">›</span><span>बीज जानकारी</span></nav>
+</div></div>
+
+<main id="main">
+
+<!-- Seed Categories -->
+<section class="section section-alt" id="categories" aria-labelledby="cat-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">वर्गीकरण</span>
+      <h2 class="section-title" id="cat-heading">बीज <span>श्रेणियाँ</span></h2>
+      <p class="section-desc">प्रमाणन श्रेणी के अनुसार बीज वर्गीकरण</p>
+    </div>
+    <div class="seed-cat-grid">
+      <div class="seed-cat-card active" onclick="showCategory('foundation')" role="button" tabindex="0" aria-pressed="true" id="cat-foundation">
+        <div class="seed-cat-icon">🌱</div>
+        <div class="seed-cat-name">आधार बीज</div>
+        <div class="seed-cat-count">Foundation Seed</div>
+      </div>
+      <div class="seed-cat-card" onclick="showCategory('certified')" role="button" tabindex="0" aria-pressed="false" id="cat-certified">
+        <div class="seed-cat-icon">✅</div>
+        <div class="seed-cat-name">प्रमाणित बीज</div>
+        <div class="seed-cat-count">Certified Seed</div>
+      </div>
+      <div class="seed-cat-card" onclick="showCategory('truthful')" role="button" tabindex="0" aria-pressed="false" id="cat-truthful">
+        <div class="seed-cat-icon">🏷️</div>
+        <div class="seed-cat-name">सत्य नामी बीज</div>
+        <div class="seed-cat-count">Truthfully Labelled</div>
+      </div>
+      <div class="seed-cat-card" onclick="showCategory('nucleus')" role="button" tabindex="0" aria-pressed="false" id="cat-nucleus">
+        <div class="seed-cat-icon">🔬</div>
+        <div class="seed-cat-name">केंद्रक बीज</div>
+        <div class="seed-cat-count">Nucleus Seed</div>
+      </div>
+      <div class="seed-cat-card" onclick="showCategory('breeder')" role="button" tabindex="0" aria-pressed="false" id="cat-breeder">
+        <div class="seed-cat-icon">🧬</div>
+        <div class="seed-cat-name">प्रजनक बीज</div>
+        <div class="seed-cat-count">Breeder Seed</div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 2px 8px rgba(0,0,0,0.06);margin-top:24px;" id="cat-desc">
+      <h3 style="font-size:1.125rem;font-weight:700;color:var(--green-800);margin-bottom:12px;">आधार बीज (Foundation Seed)</h3>
+      <p style="font-size:0.9rem;color:var(--neutral-700);line-height:1.75;">आधार बीज वह बीज होता है जो प्रजनक बीज की पहली या दूसरी पीढ़ी से उत्पादित किया जाता है। इसकी अनुवांशिक शुद्धता और गुणवत्ता का प्रमाणन राष्ट्रीय / राज्य बीज प्रमाणन संस्था द्वारा किया जाता है। आधार बीज का उपयोग प्रमाणित बीज उत्पादन के लिए किया जाता है।</p>
+    </div>
+  </div>
+</section>
+
+<!-- Crop Wise Varieties -->
+<section class="section" id="varieties" aria-labelledby="var-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">किस्में</span>
+      <h2 class="section-title" id="var-heading">फसलवार <span>बीज किस्में</span></h2>
+      <p class="section-desc">अनुशंसित किस्मों की विस्तृत जानकारी</p>
+    </div>
+
+    <!-- Crop Selector -->
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;" role="tablist" aria-label="फसल चुनें">
+      <button class="tab-btn active" role="tab" aria-selected="true" onclick="showCrop('wheat',this)">🌾 गेहूं</button>
+      <button class="tab-btn" role="tab" aria-selected="false" onclick="showCrop('paddy',this)">🌿 धान</button>
+      <button class="tab-btn" role="tab" aria-selected="false" onclick="showCrop('soybean',this)">🫘 सोयाबीन</button>
+      <button class="tab-btn" role="tab" aria-selected="false" onclick="showCrop('gram',this)">🫛 चना</button>
+      <button class="tab-btn" role="tab" aria-selected="false" onclick="showCrop('mustard',this)">🌻 सरसों</button>
+      <button class="tab-btn" role="tab" aria-selected="false" onclick="showCrop('maize',this)">🌽 मक्का</button>
+    </div>
+
+    <div class="variety-table-wrap">
+      <table id="varietyTable">
+        <thead>
+          <tr>
+            <th>किस्म का नाम</th>
+            <th>श्रेणी</th>
+            <th>पकाव अवधि (दिन)</th>
+            <th>उपज क्षमता (क्विंटल/हेक्टेयर)</th>
+            <th>अंकुरण दर</th>
+            <th>विशेषताएं</th>
+            <th>उपलब्धता</th>
+          </tr>
+        </thead>
+        <tbody id="varietyTbody">
+          <tr><td><strong>JW 3288</strong></td><td><span class="badge badge-green">प्रमाणित</span></td><td>120–125</td><td>40–50</td><td><div class="quality-indicator"><span>90%</span><div class="quality-bar"><div class="quality-fill" style="width:90%"></div></div></div></td><td>रोग प्रतिरोधी, सूखा सहिष्णु</td><td><span class="badge badge-green">उपलब्ध</span></td></tr>
+          <tr><td><strong>GW 496</strong></td><td><span class="badge badge-green">प्रमाणित</span></td><td>118–122</td><td>45–55</td><td><div class="quality-indicator"><span>88%</span><div class="quality-bar"><div class="quality-fill" style="width:88%"></div></div></div></td><td>उच्च उपज, लंबा पौधा</td><td><span class="badge badge-green">उपलब्ध</span></td></tr>
+          <tr><td><strong>HI 8498</strong></td><td><span class="badge badge-yellow">आधार</span></td><td>115–120</td><td>42–48</td><td><div class="quality-indicator"><span>85%</span><div class="quality-bar"><div class="quality-fill" style="width:85%"></div></div></div></td><td>तापमान सहिष्णु</td><td><span class="badge badge-yellow">सीमित</span></td></tr>
+          <tr><td><strong>RAJ 4120</strong></td><td><span class="badge badge-green">प्रमाणित</span></td><td>110–115</td><td>38–45</td><td><div class="quality-indicator"><span>87%</span><div class="quality-bar"><div class="quality-fill" style="width:87%"></div></div></div></td><td>जल्दी पकने वाली</td><td><span class="badge badge-green">उपलब्ध</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Quality Standards -->
+<section class="section section-alt" id="standards" aria-labelledby="std-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">ISS मानक</span>
+      <h2 class="section-title" id="std-heading">गुणवत्ता <span>मानक</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <div class="info-card">
+        <h4>🌱 अंकुरण मानक</h4>
+        <ul>
+          <li>गेहूं: न्यूनतम 85%</li>
+          <li>धान: न्यूनतम 80%</li>
+          <li>सोयाबीन: न्यूनतम 70%</li>
+          <li>चना: न्यूनतम 85%</li>
+          <li>सरसों: न्यूनतम 85%</li>
+          <li>मक्का: न्यूनतम 90%</li>
+        </ul>
+      </div>
+      <div class="info-card" style="border-left-color:var(--yellow-700);">
+        <h4>🔬 शुद्धता मानक</h4>
+        <ul>
+          <li>भौतिक शुद्धता: न्यूनतम 98%</li>
+          <li>अनुवांशिक शुद्धता: न्यूनतम 99%</li>
+          <li>नमी: अधिकतम 12%</li>
+          <li>खरपतवार बीज: शून्य</li>
+          <li>अन्य फसल के बीज: अधिकतम 0.1%</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h4>📋 परीक्षण विधि</h4>
+        <ul>
+          <li>ISTA नियमों के अनुसार</li>
+          <li>NABL मान्यता प्राप्त प्रयोगशाला</li>
+          <li>अंकुरण परीक्षण: 7–14 दिन</li>
+          <li>नमी परीक्षण: ओवन विधि</li>
+          <li>शुद्धता परीक्षण: तराजू विधि</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-bottom" style="padding:18px 0;border-top:1px solid rgba(255,255,255,0.1);">
+  <span>© 2026 म.प्र. राज्य बीज एवं फार्म विकास निगम</span>
+  <div style="display:flex;gap:16px;"><a href="#">गोपनीयता नीति</a><a href="#">अस्वीकरण</a></div>
+</div></div></footer>
+
+<script>
+const cropData = {
+  wheat: [
+    ['JW 3288','प्रमाणित','120–125','40–50','90%','रोग प्रतिरोधी, सूखा सहिष्णु','उपलब्ध','badge-green'],
+    ['GW 496','प्रमाणित','118–122','45–55','88%','उच्च उपज, लंबा पौधा','उपलब्ध','badge-green'],
+    ['HI 8498','आधार','115–120','42–48','85%','तापमान सहिष्णु','सीमित','badge-yellow'],
+    ['RAJ 4120','प्रमाणित','110–115','38–45','87%','जल्दी पकने वाली','उपलब्ध','badge-green'],
+  ],
+  paddy: [
+    ['HKR-47','प्रमाणित','115–120','45–55','82%','कम पानी में उत्तम','उपलब्ध','badge-green'],
+    ['IR-64','प्रमाणित','120–125','50–60','80%','उच्च उपज','उपलब्ध','badge-green'],
+    ['Pusa Basmati 1121','प्रमाणित','130–135','40–45','80%','सुगंधित, लंबे दाने','सीमित','badge-yellow'],
+  ],
+  soybean: [
+    ['JS 9560','प्रमाणित','95–100','20–25','78%','रोग प्रतिरोधी','उपलब्ध','badge-green'],
+    ['NRC 86','प्रमाणित','90–95','22–28','75%','अधिक प्रोटीन','उपलब्ध','badge-green'],
+    ['RVS 2001-4','प्रमाणित','92–98','24–30','80%','उच्च तेल मात्रा','सीमित','badge-yellow'],
+  ],
+  gram: [
+    ['JG 11','प्रमाणित','95–105','20–25','85%','उकठा रोग प्रतिरोधी','उपलब्ध','badge-green'],
+    ['Vijay','प्रमाणित','100–110','18–22','87%','छोटे दाने, अधिक उपज','उपलब्ध','badge-green'],
+  ],
+  mustard: [
+    ['Pusa Bold','प्रमाणित','110–120','18–22','87%','मोटे दाने, अधिक तेल','उपलब्ध','badge-green'],
+    ['RH 30','प्रमाणित','125–135','20–25','85%','उच्च उपज','उपलब्ध','badge-green'],
+  ],
+  maize: [
+    ['HQPM 1','प्रमाणित','75–80','50–60','90%','उच्च गुणवत्ता प्रोटीन','उपलब्ध','badge-green'],
+    ['DHM 117','प्रमाणित','80–85','55–65','92%','संकर किस्म','सीमित','badge-yellow'],
+  ],
+};
+
+function showCrop(crop, btn) {
+  document.querySelectorAll('[role="tablist"] .tab-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+  btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+  const data = cropData[crop] || [];
+  const tbody = document.getElementById('varietyTbody');
+  tbody.innerHTML = data.map(r => `<tr>
+    <td><strong>${r[0]}</strong></td>
+    <td><span class="badge badge-green">${r[1]}</span></td>
+    <td>${r[2]}</td>
+    <td>${r[3]}</td>
+    <td><div class="quality-indicator"><span>${r[4]}</span><div class="quality-bar"><div class="quality-fill" style="width:${r[4]}"></div></div></div></td>
+    <td>${r[5]}</td>
+    <td><span class="badge ${r[7]}">${r[6]}</span></td>
+  </tr>`).join('');
+}
+
+const catDesc = {
+  foundation: { title: 'आधार बीज (Foundation Seed)', desc: 'आधार बीज वह बीज होता है जो प्रजनक बीज की पहली या दूसरी पीढ़ी से उत्पादित किया जाता है। इसकी अनुवांशिक शुद्धता का प्रमाणन राज्य बीज प्रमाणन संस्था द्वारा किया जाता है।' },
+  certified: { title: 'प्रमाणित बीज (Certified Seed)', desc: 'प्रमाणित बीज आधार बीज की संतान होती है। यह किसानों के लिए उपलब्ध सबसे उन्नत श्रेणी का बीज है जिसे बीज अधिनियम के तहत प्रमाणित किया जाता है।' },
+  truthful: { title: 'सत्य नामी बीज (Truthfully Labelled Seed)', desc: 'सत्य नामी बीज वह बीज है जिस पर दी गई जानकारी सच्ची है लेकिन इसे प्रमाणन संस्था द्वारा औपचारिक रूप से प्रमाणित नहीं किया गया है।' },
+  nucleus: { title: 'केंद्रक बीज (Nucleus Seed)', desc: 'केंद्रक बीज किसी किस्म के विकासकर्ता द्वारा उत्पादित बीज है। यह पूर्णतः अनुवांशिक रूप से शुद्ध होता है।' },
+  breeder: { title: 'प्रजनक बीज (Breeder Seed)', desc: 'प्रजनक बीज केंद्रक बीज से प्राप्त होता है तथा इसका उत्पादन ICAR संस्थानों के वैज्ञानिकों द्वारा किया जाता है।' },
+};
+
+function showCategory(cat) {
+  document.querySelectorAll('.seed-cat-card').forEach(c => { c.classList.remove('active'); c.setAttribute('aria-pressed','false'); });
+  document.getElementById('cat-' + cat).classList.add('active');
+  document.getElementById('cat-' + cat).setAttribute('aria-pressed','true');
+  const d = catDesc[cat];
+  document.getElementById('cat-desc').innerHTML = `<h3 style="font-size:1.125rem;font-weight:700;color:var(--green-800);margin-bottom:12px;">${d.title}</h3><p style="font-size:0.9rem;color:var(--neutral-700);line-height:1.75;">${d.desc}</p>`;
+}
+
+document.querySelectorAll('.seed-cat-card').forEach(card => {
+  card.addEventListener('keypress', e => { if(e.key==='Enter'||e.key===' '){e.preventDefault();card.click();} });
+});
+</script>
+</body>
+</html>

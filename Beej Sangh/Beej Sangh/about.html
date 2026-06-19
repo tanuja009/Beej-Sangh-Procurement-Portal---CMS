@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>हमारे बारे में – बीज संघ | MP Beej Sangh</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.page-banner{background:linear-gradient(135deg,#1B5E20 0%,#2E7D32 50%,#388E3C 100%);padding:48px 0;color:#fff;}
+.page-banner h1{font-size:2rem;font-weight:700;margin-bottom:8px;}
+.page-banner p{color:rgba(255,255,255,0.8);font-size:0.9375rem;}
+.breadcrumb-nav{display:flex;align-items:center;gap:6px;font-size:0.8125rem;color:rgba(255,255,255,0.65);margin-top:12px;}
+.breadcrumb-nav a{color:rgba(255,255,255,0.8);text-decoration:none;}
+.breadcrumb-nav a:hover{color:#fff;}
+.breadcrumb-nav .sep{color:rgba(255,255,255,0.4);}
+.org-chart{display:flex;flex-direction:column;align-items:center;gap:0;}
+.org-node{background:#fff;border:2px solid var(--green-300);border-radius:12px;padding:14px 24px;text-align:center;min-width:200px;position:relative;box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+.org-node.top{background:var(--green-800);color:#fff;border-color:var(--green-800);}
+.org-node.top .node-title{color:#fff;}
+.org-node.mid{background:var(--green-50);border-color:var(--green-600);}
+.node-title{font-size:0.9375rem;font-weight:700;color:var(--neutral-900);}
+.node-sub{font-size:0.75rem;color:var(--neutral-500);margin-top:2px;}
+.org-connector{width:2px;height:28px;background:var(--green-300);margin:0 auto;}
+.org-row{display:flex;gap:24px;justify-content:center;width:100%;}
+.org-row-connector{display:flex;justify-content:center;position:relative;margin:0 auto;}
+.horiz-line{height:2px;background:var(--green-300);flex:1;}
+.vert-stubs{display:flex;justify-content:space-around;gap:0;}
+.org-branch{display:flex;flex-direction:column;align-items:center;gap:0;}
+</style>
+</head>
+<body>
+<!-- Utility Bar -->
+<div class="utility-bar"><div class="container"><div class="utility-links"><a href="#">स्क्रीन रीडर</a><span class="sep">|</span><a href="#">A</a><span class="sep">|</span><a href="#" style="font-size:0.875rem">A+</a><span class="sep">|</span><a href="#" style="font-size:0.75rem">A-</a></div><div class="lang-switch"><button class="lang-btn active">हिंदी</button><button class="lang-btn">English</button></div></div></div>
+
+<!-- Header -->
+<header class="site-header"><div class="container"><div class="header-inner">
+  <a href="index.html" class="header-logo"><svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-emblem" aria-label="बीज संघ लोगो"><circle cx="30" cy="30" r="28" fill="#2E7D32" stroke="#F9A825" stroke-width="3"/><text x="30" y="26" text-anchor="middle" fill="#F9A825" font-size="8" font-weight="700" font-family="serif">म.प्र.</text><text x="30" y="36" text-anchor="middle" fill="#fff" font-size="5.5" font-family="serif">बीज संघ</text><path d="M18 42 Q30 38 42 42" stroke="#F9A825" stroke-width="1.5" fill="none"/></svg>
+  <div class="logo-text"><span class="org-name-hi">म.प्र. राज्य बीज एवं फार्म विकास निगम</span><span class="org-name-en">MP Rajya Beej Evam Farm Vikas Nigam</span></div></a>
+  <div class="header-divider"></div>
+  <div class="header-title"><h1>बीज संघ पोर्टल</h1><p>उत्तम बीज, उत्तम उपज, समृद्ध किसान</p></div>
+  <div class="header-actions"><a href="portal-login.html" class="btn btn-primary btn-sm">लॉगिन करें</a></div>
+</div></div></header>
+
+<!-- Nav -->
+<nav class="main-nav"><div class="container"><ul class="nav-list">
+  <li><a href="index.html">होम</a></li>
+  <li><a href="about.html" class="active" aria-current="page">हमारे बारे में</a></li>
+  <li><a href="seed-registration.html">किसान सेवाएं</a></li>
+  <li><a href="seed-info.html">बीज जानकारी</a></li>
+  <li><a href="notifications.html">अधिसूचनाएं</a></li>
+  <li><a href="circulars.html">परिपत्र / आदेश</a></li>
+  <li><a href="tenders.html">निविदाएं</a></li>
+  <li><a href="news.html">समाचार एवं कार्यक्रम</a></li>
+</ul></div></nav>
+
+<!-- Page Banner -->
+<div class="page-banner">
+  <div class="container">
+    <h1>हमारे बारे में</h1>
+    <p>संगठन परिचय, दृष्टि, लक्ष्य एवं संचालक मंडल</p>
+    <nav class="breadcrumb-nav" aria-label="ब्रेडक्रंब"><a href="index.html">होम</a><span class="sep">›</span><span>हमारे बारे में</span></nav>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- Organization Overview -->
+<section class="section section-alt" id="overview" aria-labelledby="overview-heading">
+  <div class="container">
+    <div class="about-layout">
+      <div class="about-img-wrap">
+        <div style="width:100%;height:400px;background:linear-gradient(135deg,#E8F5E9 0%,#C8E6C9 40%,#81C784 70%,#388E3C 100%);display:flex;align-items:center;justify-content:center;border-radius:24px;">
+          <div style="text-align:center;color:#1B5E20;">
+            <div style="font-size:6rem;line-height:1;">🌾</div>
+            <div style="font-size:1.25rem;font-weight:700;margin-top:12px;">स्थापना 1969</div>
+            <div style="font-size:0.875rem;color:#388E3C;margin-top:4px;">55+ वर्षों की सेवा</div>
+          </div>
+        </div>
+        <div class="about-badge">
+          <span class="big">ISO</span>
+          <span class="small">9001:2015<br>प्रमाणित</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="section-tag">संगठन परिचय</span>
+        <h2 id="overview-heading">मध्यप्रदेश राज्य बीज एवं<br><span>फार्म विकास निगम</span></h2>
+        <p>मध्यप्रदेश राज्य बीज एवं फार्म विकास निगम (बीज संघ) की स्थापना वर्ष 1969 में मध्यप्रदेश शासन द्वारा की गई। निगम की स्थापना का मुख्य उद्देश्य मध्यप्रदेश के किसानों को उन्नत, प्रमाणित एवं गुणवत्तापूर्ण बीज उपलब्ध कराना था।</p>
+        <p>निगम द्वारा गेहूं, धान, सोयाबीन, चना, सरसों, मक्का एवं दलहन फसलों के प्रमाणित बीजों का उत्पादन, प्रसंस्करण, भंडारण एवं वितरण किया जाता है। निगम प्रदेश के 52 जिलों में 120 से अधिक वितरण केंद्रों के माध्यम से किसानों तक पहुंचता है।</p>
+        <p>निगम ISS (Indian Seed Standard) एवं ISTA (International Seed Testing Association) के मानकों का पालन करते हुए बीज गुणवत्ता सुनिश्चित करता है। बीज परीक्षण प्रयोगशाला NABL से मान्यता प्राप्त है।</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;">
+          <div style="text-align:center;padding:16px;background:var(--green-50);border-radius:12px;">
+            <div style="font-size:1.75rem;font-weight:700;color:var(--green-800);">50K+</div>
+            <div style="font-size:0.75rem;color:var(--neutral-600);margin-top:4px;">पंजीकृत किसान</div>
+          </div>
+          <div style="text-align:center;padding:16px;background:var(--yellow-50);border-radius:12px;">
+            <div style="font-size:1.75rem;font-weight:700;color:var(--yellow-700);">120+</div>
+            <div style="font-size:0.75rem;color:var(--neutral-600);margin-top:4px;">वितरण केंद्र</div>
+          </div>
+          <div style="text-align:center;padding:16px;background:var(--green-50);border-radius:12px;">
+            <div style="font-size:1.75rem;font-weight:700;color:var(--green-800);">52</div>
+            <div style="font-size:0.75rem;color:var(--neutral-600);margin-top:4px;">जिले</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vision & Mission -->
+<section class="section" id="vision" aria-labelledby="vision-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">दिशा</span>
+      <h2 class="section-title" id="vision-heading">दृष्टि <span>एवं लक्ष्य</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+      <div style="background:linear-gradient(135deg,var(--green-800),var(--green-700));border-radius:20px;padding:36px;color:#fff;">
+        <div style="font-size:3rem;margin-bottom:16px;">🎯</div>
+        <h3 style="font-size:1.375rem;font-weight:700;margin-bottom:16px;">हमारी दृष्टि</h3>
+        <p style="font-size:0.9375rem;line-height:1.8;color:rgba(255,255,255,0.9);">मध्यप्रदेश के प्रत्येक किसान तक उन्नत, प्रमाणित एवं गुणवत्तापूर्ण बीज की सुलभ पहुंच सुनिश्चित करना तथा कृषि उत्पादकता में वृद्धि के माध्यम से किसानों की आर्थिक स्थिति को सुदृढ़ बनाना।</p>
+      </div>
+      <div style="background:linear-gradient(135deg,var(--yellow-700),var(--yellow-600));border-radius:20px;padding:36px;color:#fff;">
+        <div style="font-size:3rem;margin-bottom:16px;">🌾</div>
+        <h3 style="font-size:1.375rem;font-weight:700;margin-bottom:16px;">हमारा लक्ष्य</h3>
+        <p style="font-size:0.9375rem;line-height:1.8;color:rgba(255,255,255,0.95);">उन्नत बीज प्रौद्योगिकी अनुसंधान एवं विकास में निवेश कर, नई किस्मों का विकास एवं प्रमाणन करते हुए, कृषि उत्पादन में क्रांतिकारी परिवर्तन लाना।</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:28px;">
+      <div style="background:#fff;border-radius:14px;padding:24px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);border-top:3px solid var(--green-600);">
+        <div style="font-size:2rem;margin-bottom:10px;">🔬</div>
+        <h4 style="font-size:0.9375rem;font-weight:700;color:var(--neutral-900);margin-bottom:6px;">गुणवत्ता</h4>
+        <p style="font-size:0.8125rem;color:var(--neutral-600);">ISTA मानकों के अनुसार बीज गुणवत्ता जांच</p>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:24px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);border-top:3px solid var(--yellow-700);">
+        <div style="font-size:2rem;margin-bottom:10px;">🚜</div>
+        <h4 style="font-size:0.9375rem;font-weight:700;color:var(--neutral-900);margin-bottom:6px;">पहुंच</h4>
+        <p style="font-size:0.8125rem;color:var(--neutral-600);">प्रदेश के दूरस्थ क्षेत्रों तक बीज पहुंचाना</p>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:24px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);border-top:3px solid var(--green-600);">
+        <div style="font-size:2rem;margin-bottom:10px;">📚</div>
+        <h4 style="font-size:0.9375rem;font-weight:700;color:var(--neutral-900);margin-bottom:6px;">प्रशिक्षण</h4>
+        <p style="font-size:0.8125rem;color:var(--neutral-600);">किसानों को तकनीकी जानकारी प्रदान करना</p>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:24px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);border-top:3px solid var(--yellow-700);">
+        <div style="font-size:2rem;margin-bottom:10px;">💰</div>
+        <h4 style="font-size:0.9375rem;font-weight:700;color:var(--neutral-900);margin-bottom:6px;">सब्सिडी</h4>
+        <p style="font-size:0.8125rem;color:var(--neutral-600);">सरकारी योजनाओं के तहत बीज पर अनुदान</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Board of Directors -->
+<section class="section section-alt" id="board" aria-labelledby="board-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">नेतृत्व</span>
+      <h2 class="section-title" id="board-heading">संचालक <span>मंडल</span></h2>
+      <p class="section-desc">निगम के कुशल नेतृत्व में सेवारत वरिष्ठ अधिकारी</p>
+    </div>
+    <div class="board-grid">
+      <div class="board-card">
+        <div class="board-card-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div class="board-card-body">
+          <div class="board-name">श्री अजय कुमार शर्मा</div>
+          <div class="board-role">अध्यक्ष, संचालक मंडल</div>
+          <div style="font-size:0.75rem;color:var(--neutral-500);margin-top:4px;">IAS, म.प्र. शासन</div>
+        </div>
+      </div>
+      <div class="board-card">
+        <div class="board-card-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div class="board-card-body">
+          <div class="board-name">श्री राजेश मिश्रा</div>
+          <div class="board-role">प्रबंध संचालक</div>
+          <div style="font-size:0.75rem;color:var(--neutral-500);margin-top:4px;">IAS, म.प्र. शासन</div>
+        </div>
+      </div>
+      <div class="board-card">
+        <div class="board-card-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div class="board-card-body">
+          <div class="board-name">श्री प्रदीप कुमार</div>
+          <div class="board-role">संचालक (वित्त)</div>
+          <div style="font-size:0.75rem;color:var(--neutral-500);margin-top:4px;">IFS</div>
+        </div>
+      </div>
+      <div class="board-card">
+        <div class="board-card-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div class="board-card-body">
+          <div class="board-name">डॉ. सुनीता वर्मा</div>
+          <div class="board-role">संचालक (तकनीकी)</div>
+          <div style="font-size:0.75rem;color:var(--neutral-500);margin-top:4px;">Ph.D. कृषि विज्ञान</div>
+        </div>
+      </div>
+      <div class="board-card">
+        <div class="board-card-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div class="board-card-body">
+          <div class="board-name">श्री महेंद्र पटेल</div>
+          <div class="board-role">स्वतंत्र संचालक</div>
+          <div style="font-size:0.75rem;color:var(--neutral-500);margin-top:4px;">कृषि विशेषज्ञ</div>
+        </div>
+      </div>
+      <div class="board-card">
+        <div class="board-card-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div class="board-card-body">
+          <div class="board-name">श्रीमती अनीता सिंह</div>
+          <div class="board-role">स्वतंत्र संचालक</div>
+          <div style="font-size:0.75rem;color:var(--neutral-500);margin-top:4px;">वित्त विशेषज्ञ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MD Message -->
+<section class="section" id="md-message" aria-labelledby="md-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">संदेश</span>
+      <h2 class="section-title" id="md-heading">प्रबंध संचालक का <span>संदेश</span></h2>
+    </div>
+    <div class="md-message-layout">
+      <div>
+        <div class="md-photo">
+          <div style="width:100%;height:360px;background:linear-gradient(135deg,#E8F5E9,#C8E6C9,#81C784);display:flex;align-items:center;justify-content:center;border-radius:24px;" aria-label="प्रबंध संचालक का चित्र">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="1" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+        </div>
+        <div class="md-name">श्री राजेश मिश्रा</div>
+        <div class="md-title">प्रबंध संचालक, म.प्र. राज्य बीज एवं फार्म विकास निगम</div>
+      </div>
+      <div class="md-message-text">
+        <blockquote>"उत्तम बीज ही उत्तम फसल की नींव है, और उत्तम फसल ही समृद्ध किसान की पहचान।"</blockquote>
+        <p>मध्यप्रदेश राज्य बीज एवं फार्म विकास निगम की आधिकारिक वेबसाइट पर आपका स्वागत है। हमारा निगम गत 55 वर्षों से मध्यप्रदेश के किसानों को उन्नत, प्रमाणित एवं गुणवत्तापूर्ण बीज उपलब्ध कराने में अग्रणी भूमिका निभाता आ रहा है।</p>
+        <p>हमारा प्रयास रहा है कि किसानों तक न केवल उत्तम बीज पहुंचे, बल्कि उन्हें आधुनिक कृषि तकनीकों का भी प्रशिक्षण मिले। इसी दिशा में हम नियमित कार्यशालाओं, प्रदर्शन प्रक्षेत्रों एवं किसान गोष्ठियों का आयोजन करते हैं।</p>
+        <p>डिजिटल इंडिया के संकल्प के अनुरूप, हमने किसान पंजीयन, बीज उपलब्धता एवं वितरण की जानकारी को ऑनलाइन किया है, ताकि किसान घर बैठे इन सेवाओं का लाभ उठा सकें।</p>
+        <p>मुझे विश्वास है कि हमारे निगम के प्रयासों से मध्यप्रदेश के कृषि क्षेत्र में नई क्रांति आएगी और किसानों की आय दोगुनी करने के संकल्प में हम महत्वपूर्ण योगदान दे सकेंगे।</p>
+        <div class="signature">— श्री राजेश मिश्रा, IAS</div>
+        <div style="font-size:0.8125rem;color:var(--neutral-500);margin-top:4px;">प्रबंध संचालक, म.प्र. राज्य बीज एवं फार्म विकास निगम</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer (shared) -->
+<footer class="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div class="footer-brand"><div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;"><svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:40px;height:40px;" aria-hidden="true"><circle cx="30" cy="30" r="28" fill="rgba(255,255,255,0.1)" stroke="#F9A825" stroke-width="2"/><text x="30" y="34" text-anchor="middle" fill="#fff" font-size="7" font-family="serif">बीज संघ</text></svg><span style="color:#fff;font-weight:700;font-size:0.875rem;">म.प्र. बीज संघ</span></div><p>मध्यप्रदेश के किसानों को उन्नत बीज उपलब्ध कराने के लिए प्रतिबद्ध।</p></div>
+    <div class="footer-col"><h4>पेज</h4><nav class="footer-links"><a href="index.html">होम</a><a href="about.html">हमारे बारे में</a><a href="notifications.html">अधिसूचनाएं</a><a href="tenders.html">निविदाएं</a><a href="news.html">समाचार</a></nav></div>
+    <div class="footer-col"><h4>सेवाएं</h4><nav class="footer-links"><a href="seed-registration.html">पंजीयन</a><a href="seed-availability.html">बीज उपलब्धता</a><a href="seed-distribution.html">वितरण</a><a href="seed-quality.html">गुणवत्ता</a></nav></div>
+    <div class="footer-col"><h4>संपर्क</h4><div class="footer-contact"><p>📍 भोपाल – 462 016</p><p>📞 0755-2554444</p><p>📧 info@mpbeejsangh.gov.in</p><div style="margin-top:12px;padding:10px;background:rgba(255,255,255,0.08);border-radius:8px;"><div style="font-size:0.75rem;color:rgba(255,255,255,0.6);">किसान हेल्पलाइन</div><div style="font-size:1.125rem;font-weight:700;color:#FFCA28;">1800-180-2360</div></div></div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 म.प्र. राज्य बीज एवं फार्म विकास निगम</span><div style="display:flex;gap:16px;"><a href="#">गोपनीयता नीति</a><a href="#">अस्वीकरण</a><a href="#">RTI</a></div></div>
+</div></footer>
+</body>
+</html>

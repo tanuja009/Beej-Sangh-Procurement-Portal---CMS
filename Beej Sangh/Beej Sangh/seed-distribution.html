@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>बीज वितरण – बीज संघ</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.page-banner{background:linear-gradient(135deg,#1B5E20,#2E7D32,#388E3C);padding:48px 0;color:#fff;}
+.page-banner h1{font-size:2rem;font-weight:700;margin-bottom:8px;}
+.breadcrumb-nav{display:flex;align-items:center;gap:6px;font-size:0.8125rem;color:rgba(255,255,255,0.65);margin-top:12px;}
+.breadcrumb-nav a{color:rgba(255,255,255,0.8);text-decoration:none;}.breadcrumb-nav .sep{color:rgba(255,255,255,0.4);}
+.center-card{background:#fff;border-radius:14px;border:1.5px solid var(--neutral-200);padding:18px;transition:all .2s;}
+.center-card:hover{border-color:var(--green-400);box-shadow:0 4px 12px rgba(0,0,0,0.08);transform:translateY(-2px);}
+.center-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:10px;}
+.center-name{font-size:0.9375rem;font-weight:700;color:var(--neutral-900);}
+.center-dist{font-size:0.75rem;color:var(--green-700);font-weight:600;margin-top:2px;}
+.center-info{font-size:0.8125rem;color:var(--neutral-600);display:flex;flex-direction:column;gap:5px;}
+.center-info span{display:flex;align-items:flex-start;gap:6px;}
+</style>
+</head>
+<body>
+<div class="utility-bar"><div class="container"><div class="utility-links"><a href="#">स्क्रीन रीडर</a><span class="sep">|</span><a href="#">A</a></div><div class="lang-switch"><button class="lang-btn active">हिंदी</button><button class="lang-btn">English</button></div></div></div>
+<header class="site-header"><div class="container"><div class="header-inner">
+  <a href="index.html" class="header-logo"><svg viewBox="0 0 60 60" fill="none" class="logo-emblem" aria-label="बीज संघ"><circle cx="30" cy="30" r="28" fill="#2E7D32" stroke="#F9A825" stroke-width="3"/><text x="30" y="26" text-anchor="middle" fill="#F9A825" font-size="8" font-weight="700" font-family="serif">म.प्र.</text><text x="30" y="36" text-anchor="middle" fill="#fff" font-size="5.5" font-family="serif">बीज संघ</text></svg>
+  <div class="logo-text"><span class="org-name-hi">म.प्र. राज्य बीज एवं फार्म विकास निगम</span><span class="org-name-en">MP Rajya Beej Evam Farm Vikas Nigam</span></div></a>
+  <div class="header-divider"></div><div class="header-title"><h1>बीज संघ पोर्टल</h1><p>उत्तम बीज, उत्तम उपज, समृद्ध किसान</p></div>
+  <div class="header-actions"><a href="portal-login.html" class="btn btn-primary btn-sm">लॉगिन करें</a></div>
+</div></div></header>
+<nav class="main-nav"><div class="container"><ul class="nav-list">
+  <li><a href="index.html">होम</a></li><li><a href="about.html">हमारे बारे में</a></li>
+  <li><a href="seed-registration.html" class="active">किसान सेवाएं</a></li>
+  <li><a href="seed-info.html">बीज जानकारी</a></li>
+  <li><a href="notifications.html">अधिसूचनाएं</a></li><li><a href="circulars.html">परिपत्र / आदेश</a></li>
+  <li><a href="tenders.html">निविदाएं</a></li><li><a href="news.html">समाचार एवं कार्यक्रम</a></li>
+</ul></div></nav>
+<div class="page-banner"><div class="container">
+  <h1>बीज वितरण केंद्र</h1>
+  <p>प्रदेश के 52 जिलों में 120+ वितरण केंद्र</p>
+  <nav class="breadcrumb-nav" aria-label="ब्रेडक्रंब"><a href="index.html">होम</a><span class="sep">›</span><span>बीज वितरण</span></nav>
+</div></div>
+
+<main id="main">
+<section class="section">
+  <div class="container">
+    <!-- Filter -->
+    <div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);margin-bottom:24px;display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;">
+      <div style="flex:1;min-width:160px;"><label style="font-size:0.8125rem;font-weight:600;color:var(--neutral-700);display:block;margin-bottom:5px;">जिला</label>
+        <select class="filter-input" style="width:100%;" aria-label="जिला चुनें"><option value="">सभी जिले</option><option>भोपाल</option><option>इंदौर</option><option>जबलपुर</option><option>ग्वालियर</option><option>उज्जैन</option><option>होशंगाबाद</option><option>विदिशा</option><option>बालाघाट</option></select>
+      </div>
+      <div style="flex:2;min-width:200px;"><label style="font-size:0.8125rem;font-weight:600;color:var(--neutral-700);display:block;margin-bottom:5px;">नाम या पता खोजें</label>
+        <input type="search" class="filter-input" style="width:100%;" placeholder="केंद्र का नाम या पता..." aria-label="खोज"/>
+      </div>
+      <button class="filter-btn" aria-label="खोजें">खोजें</button>
+    </div>
+
+    <!-- Stats -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px;text-align:center;">
+      <div style="background:var(--green-50);border:1px solid var(--green-200);border-radius:12px;padding:16px;"><div style="font-size:1.75rem;font-weight:700;color:var(--green-800);">120+</div><div style="font-size:0.8125rem;color:var(--green-700);">कुल वितरण केंद्र</div></div>
+      <div style="background:var(--yellow-50);border:1px solid var(--yellow-300);border-radius:12px;padding:16px;"><div style="font-size:1.75rem;font-weight:700;color:var(--yellow-700);">52</div><div style="font-size:0.8125rem;color:var(--yellow-700);">जिले कवर</div></div>
+      <div style="background:var(--green-50);border:1px solid var(--green-200);border-radius:12px;padding:16px;"><div style="font-size:1.75rem;font-weight:700;color:var(--green-800);">8</div><div style="font-size:0.8125rem;color:var(--green-700);">संभाग</div></div>
+    </div>
+
+    <!-- Centers Grid -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;">
+      <div class="center-card"><div class="center-header"><div><div class="center-name">मुख्य वितरण केंद्र, भोपाल</div><div class="center-dist">📍 भोपाल संभाग</div></div><span class="badge badge-green">सक्रिय</span></div><div class="center-info"><span>🏠 चेतक ब्रिज के पास, भोपाल</span><span>📞 0755-2554444</span><span>🕐 सोम–शुक्र: 9AM–5PM</span><span>🌾 गेहूं, सोयाबीन, धान</span></div></div>
+      <div class="center-card"><div class="center-header"><div><div class="center-name">जिला वितरण केंद्र, इंदौर</div><div class="center-dist">📍 इंदौर संभाग</div></div><span class="badge badge-green">सक्रिय</span></div><div class="center-info"><span>🏠 कृषि उपज मंडी, इंदौर</span><span>📞 0731-2701234</span><span>🕐 सोम–शनि: 8AM–6PM</span><span>🌾 सोयाबीन, मक्का, गेहूं</span></div></div>
+      <div class="center-card"><div class="center-header"><div><div class="center-name">जिला वितरण केंद्र, जबलपुर</div><div class="center-dist">📍 जबलपुर संभाग</div></div><span class="badge badge-green">सक्रिय</span></div><div class="center-info"><span>🏠 कृषि विश्वविद्यालय रोड, जबलपुर</span><span>📞 0761-2621234</span><span>🕐 सोम–शुक्र: 9AM–5PM</span><span>🌾 धान, गेहूं, चना</span></div></div>
+      <div class="center-card"><div class="center-header"><div><div class="center-name">जिला वितरण केंद्र, ग्वालियर</div><div class="center-dist">📍 ग्वालियर संभाग</div></div><span class="badge badge-green">सक्रिय</span></div><div class="center-info"><span>🏠 मुरार, ग्वालियर</span><span>📞 0751-2421234</span><span>🕐 सोम–शुक्र: 9AM–5PM</span><span>🌾 गेहूं, सरसों, चना</span></div></div>
+      <div class="center-card"><div class="center-header"><div><div class="center-name">जिला वितरण केंद्र, उज्जैन</div><div class="center-dist">📍 उज्जैन संभाग</div></div><span class="badge badge-green">सक्रिय</span></div><div class="center-info"><span>🏠 कृषि मंडी परिसर, उज्जैन</span><span>📞 0734-2521234</span><span>🕐 सोम–शनि: 8AM–5PM</span><span>🌾 सोयाबीन, प्याज, गेहूं</span></div></div>
+      <div class="center-card"><div class="center-header"><div><div class="center-name">जिला वितरण केंद्र, होशंगाबाद</div><div class="center-dist">📍 नर्मदापुरम संभाग</div></div><span class="badge badge-yellow">आंशिक</span></div><div class="center-info"><span>🏠 कृषि विस्तार केंद्र, होशंगाबाद</span><span>📞 07574-251234</span><span>🕐 सोम–शुक्र: 9AM–4PM</span><span>🌾 गेहूं, सोयाबीन</span></div></div>
+    </div>
+
+    <div style="text-align:center;margin-top:28px;">
+      <a href="#" class="btn btn-outline-green btn-lg">सभी 120+ केंद्र देखें</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-bottom" style="padding:18px 0;border-top:1px solid rgba(255,255,255,0.1);">
+  <span>© 2026 म.प्र. राज्य बीज एवं फार्म विकास निगम</span>
+  <div style="display:flex;gap:16px;"><a href="#">गोपनीयता नीति</a><a href="#">अस्वीकरण</a></div>
+</div></div></footer>
+</body>
+</html>

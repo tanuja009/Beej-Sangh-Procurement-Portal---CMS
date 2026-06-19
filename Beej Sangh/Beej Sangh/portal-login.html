@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>पोर्टल लॉगिन – बीज संघ</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+body{background:linear-gradient(135deg,#1B5E20 0%,#2E7D32 40%,#388E3C 70%,#4CAF50 100%);min-height:100vh;display:flex;flex-direction:column;}
+.login-container{flex:1;display:flex;align-items:center;justify-content:center;padding:40px 20px;}
+.login-card{background:#fff;border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,0.25);overflow:hidden;width:100%;max-width:900px;display:grid;grid-template-columns:1fr 1fr;}
+.login-left{background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:48px 40px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;}
+.login-left-logo{display:flex;align-items:center;gap:12px;margin-bottom:32px;}
+.login-left-logo svg{width:50px;height:50px;}
+.login-left h2{font-size:1.625rem;font-weight:700;margin-bottom:12px;}
+.login-left p{font-size:0.9rem;color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:28px;}
+.login-feature{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.1);}
+.login-feature:last-child{border-bottom:none;}
+.login-feature-icon{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;}
+.login-feature-text{font-size:0.8125rem;color:rgba(255,255,255,0.85);}
+.login-right{padding:48px 40px;}
+.login-right h3{font-size:1.5rem;font-weight:700;color:var(--neutral-900);margin-bottom:6px;}
+.login-right p{font-size:0.875rem;color:var(--neutral-600);margin-bottom:28px;}
+.login-tabs{display:flex;gap:0;margin-bottom:24px;border-bottom:2px solid var(--neutral-200);}
+.login-tab{flex:1;padding:10px;border:none;background:none;font-size:0.875rem;font-weight:600;color:var(--neutral-500);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all var(--transition);}
+.login-tab.active{color:var(--green-800);border-bottom-color:var(--green-800);}
+.form-group{display:flex;flex-direction:column;gap:5px;margin-bottom:18px;}
+.form-label{font-size:0.8125rem;font-weight:600;color:var(--neutral-700);}
+.form-input{padding:10px 14px;border:1.5px solid var(--neutral-300);border-radius:8px;font-size:0.875rem;font-family:inherit;outline:none;transition:border-color var(--transition);}
+.form-input:focus{border-color:var(--green-600);}
+.form-hint{font-size:0.75rem;color:var(--neutral-500);}
+.login-btn{width:100%;padding:12px;background:var(--green-800);color:#fff;border:none;border-radius:8px;font-size:0.9375rem;font-weight:700;cursor:pointer;transition:background var(--transition);margin-top:8px;}
+.login-btn:hover{background:var(--green-900);}
+.divider{display:flex;align-items:center;gap:12px;margin:20px 0;color:var(--neutral-400);font-size:0.75rem;}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--neutral-200);}
+.captcha-box{border:1.5px solid var(--neutral-300);border-radius:8px;padding:12px;display:flex;align-items:center;justify-content:space-between;background:var(--neutral-50);margin-bottom:18px;}
+.captcha-check{display:flex;align-items:center;gap:8px;font-size:0.875rem;color:var(--neutral-700);cursor:pointer;}
+.help-links{display:flex;gap:16px;font-size:0.75rem;margin-top:16px;flex-wrap:wrap;}
+.help-links a{color:var(--green-700);}
+.tab-panel{display:none;}.tab-panel.active{display:block;}
+@media(max-width:640px){.login-card{grid-template-columns:1fr;}.login-left{padding:32px 24px;}.login-right{padding:32px 24px;}}
+</style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div style="background:rgba(0,0,0,0.2);padding:8px 0;">
+  <div style="max-width:900px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;">
+    <a href="index.html" style="color:rgba(255,255,255,0.8);font-size:0.8125rem;text-decoration:none;display:flex;align-items:center;gap:6px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+      होम पर वापस जाएं
+    </a>
+    <div class="lang-switch"><button class="lang-btn active">हिंदी</button><button class="lang-btn">English</button></div>
+  </div>
+</div>
+
+<div class="login-container">
+  <div class="login-card">
+    <!-- Left Panel -->
+    <div class="login-left">
+      <div>
+        <div class="login-left-logo">
+          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="बीज संघ लोगो">
+            <circle cx="30" cy="30" r="28" fill="rgba(255,255,255,0.15)" stroke="#F9A825" stroke-width="2"/>
+            <text x="30" y="26" text-anchor="middle" fill="#F9A825" font-size="8" font-weight="700" font-family="serif">म.प्र.</text>
+            <text x="30" y="36" text-anchor="middle" fill="#fff" font-size="5.5" font-family="serif">बीज संघ</text>
+          </svg>
+          <div>
+            <div style="font-size:0.875rem;font-weight:700;line-height:1.2;">म.प्र. राज्य बीज एवं</div>
+            <div style="font-size:0.875rem;font-weight:700;">फार्म विकास निगम</div>
+          </div>
+        </div>
+        <h2>किसान एवं<br>अधिकारी पोर्टल</h2>
+        <p>प्रमाणित बीज के लिए पंजीयन, उपलब्धता जांच, वितरण एवं गुणवत्ता रिपोर्ट — सब एक जगह।</p>
+      </div>
+      <div>
+        <div class="login-feature"><div class="login-feature-icon">🌾</div><div class="login-feature-text">बीज उपलब्धता एवं किस्म जांच</div></div>
+        <div class="login-feature"><div class="login-feature-icon">📋</div><div class="login-feature-text">ऑनलाइन बीज पंजीयन</div></div>
+        <div class="login-feature"><div class="login-feature-icon">📦</div><div class="login-feature-text">वितरण स्थिति ट्रैकिंग</div></div>
+        <div class="login-feature"><div class="login-feature-icon">📊</div><div class="login-feature-text">गुणवत्ता रिपोर्ट एवं प्रमाण पत्र</div></div>
+      </div>
+      <div style="margin-top:24px;padding:16px;background:rgba(255,255,255,0.1);border-radius:12px;">
+        <div style="font-size:0.75rem;color:rgba(255,255,255,0.7);margin-bottom:4px;">किसान हेल्पलाइन</div>
+        <div style="font-size:1.375rem;font-weight:700;color:#FFCA28;">1800-180-2360</div>
+        <div style="font-size:0.6875rem;color:rgba(255,255,255,0.5);">सोम–शुक्र | 9 AM – 6 PM | टोल फ्री</div>
+      </div>
+    </div>
+
+    <!-- Right Panel: Login Form -->
+    <div class="login-right">
+      <h3>पोर्टल में प्रवेश करें</h3>
+      <p>अपनी भूमिका के अनुसार लॉगिन करें</p>
+
+      <!-- Role Tabs -->
+      <div class="login-tabs" role="tablist" aria-label="उपयोगकर्ता भूमिका">
+        <button class="login-tab active" role="tab" aria-selected="true" aria-controls="farmer-panel" id="tab-farmer" onclick="switchLoginTab('farmer')">🌾 किसान</button>
+        <button class="login-tab" role="tab" aria-selected="false" aria-controls="officer-panel" id="tab-officer" onclick="switchLoginTab('officer')">👔 अधिकारी</button>
+        <button class="login-tab" role="tab" aria-selected="false" aria-controls="dealer-panel" id="tab-dealer" onclick="switchLoginTab('dealer')">🏪 डीलर</button>
+      </div>
+
+      <!-- Farmer Login -->
+      <div class="tab-panel active" id="farmer-panel" role="tabpanel" aria-labelledby="tab-farmer">
+        <form onsubmit="return handleLogin(event)" aria-label="किसान लॉगिन">
+          <div class="form-group">
+            <label class="form-label" for="farmer-id">किसान पंजीयन क्र. / आधार नंबर <span style="color:red;">*</span></label>
+            <input class="form-input" id="farmer-id" type="text" placeholder="MPBF-XXXXX या 12 अंकों का आधार" required aria-required="true" autocomplete="username"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="farmer-otp">OTP / पासवर्ड <span style="color:red;">*</span></label>
+            <div style="display:flex;gap:8px;">
+              <input class="form-input" id="farmer-otp" type="password" placeholder="OTP या पासवर्ड दर्ज करें" required aria-required="true" style="flex:1;" autocomplete="current-password"/>
+              <button type="button" class="btn btn-outline-green btn-sm" onclick="sendOTP()" style="white-space:nowrap;">OTP भेजें</button>
+            </div>
+            <span class="form-hint">रजिस्टर्ड मोबाइल नंबर पर OTP भेजा जाएगा</span>
+          </div>
+          <!-- Captcha -->
+          <div class="captcha-box" role="group" aria-label="कैप्चा सत्यापन">
+            <label class="captcha-check">
+              <input type="checkbox" required aria-required="true"/>
+              <span>मैं रोबोट नहीं हूं</span>
+            </label>
+            <div style="font-size:0.6875rem;color:var(--neutral-500);text-align:right;">reCAPTCHA<br>गोपनीयता | शर्तें</div>
+          </div>
+          <button type="submit" class="login-btn">लॉगिन करें</button>
+          <div class="help-links">
+            <a href="seed-registration.html">नया पंजीयन करें</a>
+            <a href="#">पासवर्ड भूल गए?</a>
+            <a href="#">सहायता</a>
+          </div>
+        </form>
+      </div>
+
+      <!-- Officer Login -->
+      <div class="tab-panel" id="officer-panel" role="tabpanel" aria-labelledby="tab-officer">
+        <form onsubmit="return handleLogin(event)" aria-label="अधिकारी लॉगिन">
+          <div class="form-group">
+            <label class="form-label" for="officer-id">कर्मचारी आईडी <span style="color:red;">*</span></label>
+            <input class="form-input" id="officer-id" type="text" placeholder="MPBF-EMP-XXXXX" required aria-required="true" autocomplete="username"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="officer-pass">पासवर्ड <span style="color:red;">*</span></label>
+            <input class="form-input" id="officer-pass" type="password" placeholder="पासवर्ड दर्ज करें" required aria-required="true" autocomplete="current-password"/>
+          </div>
+          <div class="captcha-box" role="group" aria-label="कैप्चा सत्यापन">
+            <label class="captcha-check"><input type="checkbox" required aria-required="true"/><span>मैं रोबोट नहीं हूं</span></label>
+            <div style="font-size:0.6875rem;color:var(--neutral-500);text-align:right;">reCAPTCHA<br>गोपनीयता | शर्तें</div>
+          </div>
+          <button type="submit" class="login-btn">लॉगिन करें</button>
+          <div class="help-links"><a href="#">पासवर्ड रीसेट</a><a href="#">IT सहायता</a></div>
+        </form>
+      </div>
+
+      <!-- Dealer Login -->
+      <div class="tab-panel" id="dealer-panel" role="tabpanel" aria-labelledby="tab-dealer">
+        <form onsubmit="return handleLogin(event)" aria-label="डीलर लॉगिन">
+          <div class="form-group">
+            <label class="form-label" for="dealer-id">डीलर लाइसेंस क्र. <span style="color:red;">*</span></label>
+            <input class="form-input" id="dealer-id" type="text" placeholder="MP-SEED-DLR-XXXXX" required aria-required="true" autocomplete="username"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="dealer-pass">पासवर्ड <span style="color:red;">*</span></label>
+            <input class="form-input" id="dealer-pass" type="password" placeholder="पासवर्ड दर्ज करें" required aria-required="true" autocomplete="current-password"/>
+          </div>
+          <div class="captcha-box" role="group" aria-label="कैप्चा सत्यापन">
+            <label class="captcha-check"><input type="checkbox" required aria-required="true"/><span>मैं रोबोट नहीं हूं</span></label>
+            <div style="font-size:0.6875rem;color:var(--neutral-500);text-align:right;">reCAPTCHA<br>गोपनीयता | शर्तें</div>
+          </div>
+          <button type="submit" class="login-btn">लॉगिन करें</button>
+          <div class="help-links"><a href="#">डीलर पंजीयन</a><a href="#">सहायता</a></div>
+        </form>
+      </div>
+
+      <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--neutral-200);text-align:center;">
+        <p style="font-size:0.75rem;color:var(--neutral-500);">सहायता के लिए: <a href="tel:18001802360" style="color:var(--green-800);font-weight:600;">1800-180-2360</a> | <a href="mailto:help@mpbeejsangh.gov.in" style="color:var(--green-800);">help@mpbeejsangh.gov.in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;padding:16px;color:rgba(255,255,255,0.6);font-size:0.75rem;">
+  © 2026 म.प्र. राज्य बीज एवं फार्म विकास निगम | <a href="index.html" style="color:rgba(255,255,255,0.8);">होम</a> | <a href="#" style="color:rgba(255,255,255,0.8);">गोपनीयता नीति</a>
+</div>
+
+<script>
+function switchLoginTab(tab) {
+  ['farmer','officer','dealer'].forEach(t => {
+    document.getElementById('tab-'+t).classList.remove('active');
+    document.getElementById('tab-'+t).setAttribute('aria-selected','false');
+    document.getElementById(t+'-panel').classList.remove('active');
+  });
+  document.getElementById('tab-'+tab).classList.add('active');
+  document.getElementById('tab-'+tab).setAttribute('aria-selected','true');
+  document.getElementById(tab+'-panel').classList.add('active');
+}
+function sendOTP() {
+  const id = document.getElementById('farmer-id').value;
+  if (!id) { alert('कृपया पहले किसान पंजीयन क्र. या आधार दर्ज करें।'); return; }
+  alert('OTP आपके रजिस्टर्ड मोबाइल नंबर पर भेज दिया गया है।');
+}
+function handleLogin(e) {
+  e.preventDefault();
+  // In production, this would submit to the backend
+  alert('लॉगिन सफल! डैशबोर्ड लोड हो रहा है...');
+  return false;
+}
+</script>
+</body>
+</html>
